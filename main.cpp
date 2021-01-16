@@ -1,17 +1,34 @@
 #include <GLFW/glfw3.h>
 
+#include <iostream>
+
+#include "include/ProcessInput.h"
+
+using namespace std;
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
+
+const char *title = "Hero is Running";
+
+void process_keyboard_input(GLFWwindow *window);
+
 int main(void)
 {
     GLFWwindow* window;
 
-    /* Initialize the library */
+    /* Initialize the GLFW */
     if (!glfwInit())
-        return -1;
-
+    {
+		cout << "Cannot initialize GLFW" << endl;
+		return -1;
+	}
+        
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, title, NULL, NULL);
     if (!window)
     {
+		cout << "Cannot create a window" << endl;
         glfwTerminate();
         return -1;
     }
@@ -19,9 +36,13 @@ int main(void)
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
+	ProcessInput *process_input = new ProcessInput();
+
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
+		process_input->keyboard(window);
+		
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
 
