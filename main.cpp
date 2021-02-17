@@ -1,8 +1,9 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <string>
 
-#include "include/ProcessInput.h"
+#include "include/process_input.h"
 
 using namespace std;
 
@@ -10,6 +11,7 @@ const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
 const char *title = "Hero is Running";
+std::string error_text_glfw_init = "Cannot initialize GLFW";
 
 void process_keyboard_input(GLFWwindow *window);
 
@@ -20,7 +22,7 @@ int main(void)
     /* Initialize the GLFW */
     if (!glfwInit())
     {
-		cout << "Cannot initialize GLFW" << endl;
+		cout << error_text_glfw_init << endl;
 		return -1;
 	}
         

@@ -1,5 +1,8 @@
+TARGET = start
+LIBS = -lGL -lglfw
+SRC = main.cpp src/player/player.cpp
 main:
-	g++ -o start main.cpp -lGL -lglfw
+	g++ -o $(TARGET) $(SRC) $(LIBS)
 
 clear:
-	rm -rf *.o
+	rm start
