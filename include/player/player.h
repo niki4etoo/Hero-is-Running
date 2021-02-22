@@ -1,18 +1,19 @@
-#ifndef _PLAYER_H_
-#define _PLAYER_H_
+#ifndef PLAYER_H_
+#define PLAYER_H_
 
 class Player {
 	unsigned int id;
-	
+
 	unsigned int health;
 	float damage;
 	float shield_points;
 	float speed;
-	
+
 	float jump_factor;
-	
-public:
-	Player(unsigned int id, unsigned int health, float damage, float shield_points, float speed, float jump_factor);
+
+       public:
+	Player(unsigned int id, unsigned int health, float damage,
+	       float shield_points, float speed, float jump_factor);
 	~Player();
 	void set_id(unsigned int id);
 	void set_health(unsigned int health);

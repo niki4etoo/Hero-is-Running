@@ -2,17 +2,14 @@
 #define PROCESS_INPUT
 
 class ProcessInput {
-
-public:
+       public:
 	ProcessInput(){};
 	~ProcessInput(){};
-	
-	void keyboard(GLFWwindow *window)
-	{
+
+	void keyboard(GLFWwindow *window) {
 		if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 			glfwSetWindowShouldClose(window, true);
 	}
-
 };
 
 #endif
