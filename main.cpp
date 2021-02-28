@@ -46,7 +46,7 @@ int main(void) {
 	// glfw window creation
 	// --------------------
 	GLFWwindow *window =
-	    glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, title.c_str(), NULL, NULL);
+	    glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, title.c_str(), glfwGetPrimaryMonitor(), NULL);
 	if (window == NULL) {
 		std::cout << error_text_glfw_window << std::endl;
 		glfwTerminate();
