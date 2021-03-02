@@ -15,7 +15,7 @@ class InputProcessing {
 		// Camera controls
 		if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 			camera->Position +=
-			    camera->MovementSpeed * camera->Front;
+			    camera->MovementSpeed * camera->Up;
 		if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 			camera->Position -=
 			    camera->MovementSpeed * camera->Front;
