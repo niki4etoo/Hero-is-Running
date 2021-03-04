@@ -15,6 +15,8 @@
 #include "include/callbacks.h"
 #include "include/input_processing.h"
 
+#include "include/scores/score.h"
+
 using namespace std;
 
 const unsigned int SCR_WIDTH = 800;
@@ -113,6 +115,12 @@ int main(void) {
 	TextureLoader tl1("images/2D_topdown.png", map);
 	shader.setInt("map_2d", 0);
 	shader.use();
+	
+	//Load level
+	
+	//Score object	
+	Score *score = new Score(0);
+	std::cout << "Initial score: " << score->getInitPoints() << std::endl;
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window)) {
