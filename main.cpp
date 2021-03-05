@@ -16,6 +16,7 @@
 #include "include/input_processing.h"
 
 #include "include/scores/score.h"
+#include "include/enemy/enemy.h"
 
 using namespace std;
 
@@ -121,6 +122,9 @@ int main(void) {
 	//Score object	
 	Score *score = new Score(0);
 	std::cout << "Initial score: " << score->getInitPoints() << std::endl;
+	
+	//Initialize an enemy
+	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window)) {
