@@ -15,53 +15,29 @@
 #include "include/callbacks.h"
 #include "include/input_processing.h"
 
+#include "include/glfw_initialize.h"
+
 #include "include/scores/score.h"
 #include "include/enemy/enemy.h"
 
+
 using namespace std;
 
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+
 
 // timing
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
-const std::string title = "Hero is Running";
-const std::string error_text_glfw_window = "Failed to create Window.";
 const std::string error_text_glad_initialize = "Failed to initialize GLAD.";
 
 Callbacks *callback = new Callbacks();
 InputProcessing *input = new InputProcessing();
 
 int main(void) {
-	// glfw: initialize and configure
-	// ------------------------------
-	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-#ifdef __APPLE__
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif
-
-	// glfw window creation
-	// --------------------
-	GLFWwindow *window =
-	    glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, title.c_str(), glfwGetPrimaryMonitor(), NULL);
-	if (window == NULL) {
-		std::cout << error_text_glfw_window << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(window);
-	glfwSetFramebufferSizeCallback(window, callback->framebuffer_size);
-	glfwSetCursorPosCallback(window, callback->mouse_input);
-	glfwSetScrollCallback(window, callback->mouse_scroll);
-
-	// tell GLFW to capture our mouse
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	
+	//GLFW Initialization
+	GLFWInitialize *glfwInit = new GLFWInitialize("Hero is Running", callback);
 
 	// glad: load all OpenGL function pointers
 	// ---------------------------------------
@@ -127,7 +103,7 @@ int main(void) {
 	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
 	// render loop
 	// -----------
-	while (!glfwWindowShouldClose(window)) {
+	while (!glfwWindowShouldClose(glfwInit->getWindow())) {
 		// per-frame time logic
 		// --------------------
 		float currentFrame = glfwGetTime();
@@ -136,7 +112,7 @@ int main(void) {
 
 		// input
 		// -----
-		input->keyboard_input(window, deltaTime);
+		input->keyboard_input(glfwInit->getWindow(), deltaTime);
 
 		// render
 		// ------
@@ -156,7 +132,7 @@ int main(void) {
 		// glfw: swap buffers and poll IO events (keys pressed/released,
 		// mouse moved etc.)
 		// -------------------------------------------------------------------------------
-		glfwSwapBuffers(window);
+		glfwSwapBuffers(glfwInit->getWindow());
 		glfwPollEvents();
 	}
 
