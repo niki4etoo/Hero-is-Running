@@ -34,6 +34,8 @@ const std::string error_text_glad_initialize = "Failed to initialize GLAD.";
 Callbacks *callback = new Callbacks();
 InputProcessing *input = new InputProcessing();
 
+void drawMap(unsigned int planeVAO, unsigned int map);
+
 int main(void) {
 	
 	//GLFW Initialization
@@ -122,13 +124,7 @@ int main(void) {
 		
 		// be sure to activate shader when setting uniforms/drawing
 		shader.use();
-
-		// world transformation
-		glBindVertexArray(planeVAO);
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, map);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
-
+		drawMap(planeVAO, map);
 		// glfw: swap buffers and poll IO events (keys pressed/released,
 		// mouse moved etc.)
 		// -------------------------------------------------------------------------------
@@ -147,3 +143,12 @@ int main(void) {
 	glfwTerminate();
 	return 0;
 }
+
+void drawMap(unsigned int planeVAO, unsigned int map)
+{
+	// world transformation
+	glBindVertexArray(planeVAO);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, map);
+	glDrawArrays(GL_TRIANGLES, 0, 6);
+}		
