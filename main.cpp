@@ -19,7 +19,7 @@
 
 #include "include/scores/score.h"
 #include "include/enemy/enemy.h"
-
+#include "include/ui/main_menu.h"
 
 using namespace std;
 
@@ -103,6 +103,7 @@ int main(void) {
 	
 	//Initialize an enemy
 	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
+	
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(glfwInit->getWindow())) {
