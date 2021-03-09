@@ -6,6 +6,8 @@ MainMenu::MainMenu(std::string startBtnText, std::string settingsBtnText, std::s
 	this->quitBtnText = quitBtnText;	
 }
 
+//Setters
+
 void MainMenu::startButton(){
 	//to do
 }
@@ -22,7 +24,7 @@ void MainMenu::setStartButtonHeight(size_t height){
 	this->startBtnHeight = height;
 }
 
-void MainMenu::setStartButtonBorderRadius(size_t radius){
+void MainMenu::setStartButtonBorderRadius(float radius){
 	this->startBtnRadius = radius;
 }
 
@@ -47,7 +49,7 @@ void MainMenu::setSettingsButtonHeight(size_t height){
 	this->settingsBtnHeight = height;
 }
 
-void MainMenu::setSettingsButtonBorderRadius(size_t radius){
+void MainMenu::setSettingsButtonBorderRadius(float radius){
 	this->settingsBtnRadius = radius;
 }
 
@@ -72,10 +74,72 @@ void MainMenu::setQuitButtonHeight(size_t height){
 	this->quitBtnHeight = height;
 }
 
-void MainMenu::setQuitButtonBorderRadius(size_t radius){
+void MainMenu::setQuitButtonBorderRadius(float radius){
 	this->quitBtnRadius = radius;
 }
 
 void MainMenu::setQuitButtonBackgroundColor(float r, float g, float b, float a){
+	//to do
+}
+
+//Getters
+
+std::string MainMenu::getStartButtonText(){
+	return this->startBtnText;
+}
+
+size_t MainMenu::getStartButtonWidth(){
+	return this->startBtnWidth;
+}
+
+size_t MainMenu::getStartButtonHeight(){
+	return this->startBtnHeight;
+}
+
+float MainMenu::getStartButtonBorderRadius(){
+	return this->startBtnRadius;
+}
+
+float MainMenu::getStartButtonBackgroundColor(){
+	//to do
+}
+
+std::string MainMenu::getSettingsButtonText(){
+	return this->settingsBtnText;
+}
+
+size_t MainMenu::getSettingsButtonWidth(){
+	return this->settingsBtnWidth;
+}
+
+size_t MainMenu::getSettingsButtonHeight(){
+	return this->settingsBtnHeight;
+}
+
+float MainMenu::getSettingsButtonBorderRadius(){
+	return this->settingsBtnRadius;
+}
+
+float MainMenu::getSettingsButtonBackgroundColor(){
+	//to do
+}
+
+std::string MainMenu::getQuitButtonText(){
+	return this->quitBtnText;
+}
+
+size_t MainMenu::getQuitButtonWidth(){
+	return this->quitBtnWidth;
+}
+
+size_t MainMenu::getQuitButtonHeight(){
+	return this->quitBtnHeight;
+}
+
+float MainMenu::getQuitButtonBorderRadius(){
+	return this->quitBtnRadius;
+}
+
+float MainMenu::getQuitButtonBackgroundColor(){
 	//to do
 }

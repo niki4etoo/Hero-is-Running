@@ -60,13 +60,13 @@ int main(void) {
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
 	float vertices[] = {
-	    -3.0f, -3.0f, 0.0f, 0.0f, 0.0f,
-	     3.0f, -3.0f, 0.0f, 1.0f, 0.0f,
-	     3.0f,  3.0f, 0.0f, 1.0f, 1.0f,
+	    -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
+	     1.0f, -1.0f, 0.0f, 1.0f, 0.0f,
+	     1.0f,  1.0f, 0.0f, 1.0f, 1.0f,
 	     
-	    -3.0f, -3.0f, 0.0f, 0.0f, 0.0f,
-	     3.0f,  3.0f, 0.0f, 1.0f, 1.0f,
-	    -3.0f,  3.0f, 0.0f, 0.0f, 1.0f};
+	    -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
+	     1.0f,  1.0f, 0.0f, 1.0f, 1.0f,
+	    -1.0f,  1.0f, 0.0f, 0.0f, 1.0f};
 	// first, configure the cube's VAO (and VBO)
 	unsigned int planeVBO, planeVAO;
 	glGenVertexArrays(1, &planeVAO);
