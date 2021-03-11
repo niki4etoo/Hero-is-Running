@@ -16,6 +16,9 @@ public:
 	void pointsField();
 	void timeField();
 	
+	void resetBars();
+	void resetFields();
+	
 	//Setters
 	void setHealth(unsigned int health);
 	void setShield(unsigned int shield);

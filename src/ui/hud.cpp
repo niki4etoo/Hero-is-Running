@@ -70,3 +70,15 @@ unsigned int HUD::getPoints(){
 unsigned int HUD::getTime(){
 	return this->time;
 }
+
+//Reset
+void HUD::resetBars(){
+	this->health = 100;
+	this->shield = 10;
+	this->damage = 20;
+}
+
+void HUD::resetFields(){
+	this->points = 0;
+	this->time = 0;
+}
