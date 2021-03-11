@@ -17,9 +17,12 @@
 
 #include "include/glfw_initialize.h"
 
+#include "include/player/player.h"
+#include "include/player/player_profile.h"
 #include "include/scores/score.h"
 #include "include/enemy/enemy.h"
 #include "include/ui/main_menu.h"
+
 
 using namespace std;
 
