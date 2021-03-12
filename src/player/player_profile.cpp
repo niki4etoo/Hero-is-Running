@@ -26,6 +26,14 @@ void PlayerProfile::setCity(std::string city){
 	this->city = city;
 }
 
+void PlayerProfile::setAvatarDescription(std::string avatarDescription){
+	this->avatarDescription = avatarDescription;
+}
+
+void PlayerProfile::setShortDescription(std::string shortDescription){
+	this->shortDescription = shortDescription;
+}
+
 
 void PlayerProfile::setNickname(std::string nickname){
 	this->nickname = nickname;
@@ -64,6 +72,13 @@ std::string PlayerProfile::getCity(){
 	return this->city;
 }
 
+std::string PlayerProfile::getAvatarDescription(){
+	return this->avatarDescription;
+}
+
+std::string PlayerProfile::getShortDescription(){
+	return this->shortDescription;
+}
 
 std::string PlayerProfile::getNickname(){
 	return this->nickname;

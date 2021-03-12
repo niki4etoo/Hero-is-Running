@@ -12,7 +12,8 @@ class PlayerProfile {
 	
 	std::string country;
 	std::string city;
-	
+	std::string avatarDescription;
+	std::string shortDescription;
 	//Game info
 	std::string nickname;
 	std::string hero;
@@ -31,7 +32,8 @@ public:
 	
 	void setCountry(std::string country);
 	void setCity(std::string city);
-	
+	void setAvatarDescription(std::string avatarDescription);
+	void setShortDescription(std::string shortDescription);
 	
 	void setNickname(std::string nickname);
 	void setHero(std::string hero);
@@ -46,7 +48,8 @@ public:
 	
 	std::string getCountry();
 	std::string getCity();
-	
+	std::string getAvatarDescription();
+	std::string getShortDescription();
 	
 	std::string getNickname();
 	std::string getHero();
