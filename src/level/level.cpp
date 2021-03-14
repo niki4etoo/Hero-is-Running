@@ -2,20 +2,7 @@
 #include "../../include/checkpoint/checkpoint.h"
 
 Level::Level(size_t option){
-	this->option = option;
-	
-	//Level selection
-	switch(this->option) {
-		case 1:
-			//level 1
-			break;
-		case 2:
-			//level 2
-			break;
-		case 3:
-			//level 3
-			break;
-	}
+	std::cout << "Level " << option << std::endl;
 }
 
 void restartLevel(Checkpoint *checkpoint){

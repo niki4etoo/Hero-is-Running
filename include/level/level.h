@@ -2,6 +2,7 @@
 #define LEVEL_H_
 
 #include "../checkpoint/checkpoint.h"
+#include <iostream>
 #include <cstddef>
 
 class Level {
