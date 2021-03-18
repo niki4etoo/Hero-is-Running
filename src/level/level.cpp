@@ -3,6 +3,15 @@
 
 Level::Level(size_t option){
 	std::cout << "Level " << option << std::endl;
+	
+	//Populate grid
+	std::map<float, float> grid = { { 0.0f, 0.0f }, { 0.5f, 0.5f }, { 1.0f, 1.0f } };
+	
+	for(auto ibegin = grid.begin(); ibegin != grid.end(); ++ibegin)
+	{
+		std::cout << "x: " << ibegin->first << "y: " << ibegin->second << std::endl;
+	}
+	
 }
 
 void restartLevel(Checkpoint *checkpoint){

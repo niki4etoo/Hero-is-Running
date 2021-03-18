@@ -3,12 +3,14 @@
 
 #include "../checkpoint/checkpoint.h"
 #include <iostream>
+#include <map>
 #include <cstddef>
 
 class Level {
 	size_t option;
 	size_t difficulty;
 	bool restart = false;
+	std::map<float, float> grid;
 public:
 	Level(size_t option);
 	~Level(){};
