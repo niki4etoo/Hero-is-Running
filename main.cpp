@@ -17,6 +17,7 @@
 
 #include "include/glfw_initialize.h"
 
+#include "include/level/level.h"
 #include "include/player/player.h"
 #include "include/player/player_profile.h"
 #include "include/scores/score.h"
@@ -99,7 +100,7 @@ int main(void) {
 	shader.use();
 	
 	//Load level
-	
+	Level *level = new Level(5);
 	//Score object	
 	Score *score = new Score(0);
 	std::cout << "Initial score: " << score->getInitPoints() << std::endl;
