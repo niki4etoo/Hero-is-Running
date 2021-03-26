@@ -26,6 +26,24 @@ public:
 	void loadTexture(Texture terrainTexture);
 	void block(Texture terrainTexture, size_t posX, size_t posY, size_t width = 32, size_t height = 32);
 	void blockBy4(Texture terrainTexture, size_t posX, size_t posY, size_t width = 32, size_t height = 32);
+	
+	//Setters
+	void setLevelID(size_t levelID);
+	void setTextureID(size_t textureID);
+	void setBlocksCount(size_t blocksCount);
+	void setBlockPosX(size_t posX);
+	void setBlockPoxY(size_t posY);
+	void setBlockWidth(size_t width);
+	void setBlockHeight(size_t height);
+	
+	//Getters
+	size_t getLevelID();
+	size_t getTextureID();
+	size_t getBlocksCount();
+	size_t getBlockPosX();
+	size_t getBlockPoxY();
+	size_t getBlockWidth();
+	size_t getBlockHeight();
 };
 
 #endif

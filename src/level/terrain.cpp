@@ -24,3 +24,61 @@ void Terrain::blockBy4(Texture terrainTexture, size_t posX, size_t posY, size_t 
 	
 	this->blocksCount = 4;
 }
+
+//Setters
+void Terrain::setLevelID(size_t levelID){
+	this->levelID = levelID;
+}
+
+void Terrain::setTextureID(size_t textureID){
+	this->textureID = textureID;
+}
+
+void Terrain::setBlocksCount(size_t blocksCount){
+	this->blocksCount = blocksCount;
+}
+
+void Terrain::setBlockPosX(size_t posX){
+	this->blockPosX = posX;
+}
+
+void Terrain::setBlockPoxY(size_t posY){
+	this->blockPosY = posY;
+}
+
+void Terrain::setBlockWidth(size_t width){
+	this->blockWidth = width;
+}
+
+void Terrain::setBlockHeight(size_t height){
+	this->blockHeight = height;
+}
+
+//Getters
+size_t Terrain::getLevelID(){
+	return this->levelID;
+}
+
+size_t Terrain::getTextureID(){
+	return this->textureID;
+}
+
+size_t Terrain::getBlocksCount(){
+	return this->blocksCount;
+}
+
+size_t Terrain::getBlockPosX(){
+	return this->blockPosX;
+}
+
+size_t Terrain::getBlockPoxY(){
+	return this->blockPosY;
+}
+
+size_t Terrain::getBlockWidth(){
+	return this->blockWidth;
+}
+
+size_t Terrain::getBlockHeight(){
+	return this->blockHeight;
+}
