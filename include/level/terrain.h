@@ -25,6 +25,7 @@ public:
 
 	void loadTexture(Texture terrainTexture);
 	void block(Texture terrainTexture, size_t posX, size_t posY, size_t width = 32, size_t height = 32);
+	void blockBy2(Texture terrainTexture, size_t posX, size_t posY, size_t width = 32, size_t height = 32);
 	void blockBy4(Texture terrainTexture, size_t posX, size_t posY, size_t width = 32, size_t height = 32);
 	
 	//Setters
