@@ -15,7 +15,7 @@ void Terrain::block(Texture terrainTexture, size_t posX, size_t posY, size_t wid
 	this->blocksCount = 1;
 }
 
-void blockBy2(Texture terrainTexture, size_t posX, size_t posY, size_t width, size_t height){
+void Terrain::blockBy2(Texture terrainTexture, size_t posX, size_t posY, size_t width, size_t height){
 	this->terrainTexture = terrainTexture;
 	this->blockPosX = posX;
 	this->blockPosY = posY;
@@ -53,8 +53,7 @@ void Terrain::setBlockPosX(size_t posX){
 }
 
 void Terrain::setBlockPoxY(size_t posY){
-	this->blockPъ
-	osY = posY;
+	this->blockPosY = posY;
 }
 
 void Terrain::setBlockWidth(size_t width){

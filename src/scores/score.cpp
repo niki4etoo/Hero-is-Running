@@ -16,6 +16,10 @@ void Score::setFactorPoints(float factor){
 	this->factor = factor;
 }
 
+void Score::setPoints(size_t points){
+	this->points = points;
+}
+
 size_t Score::getInitPoints(){
 	return this->initPoints;
 }
@@ -26,4 +30,8 @@ size_t Score::getCurrentPoints(){
 
 float Score::getFactorPoints(){
 	return this->factor;
+}
+
+size_t Score::getPoints(){
+	return this->points;
 }
