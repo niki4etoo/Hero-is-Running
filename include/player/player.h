@@ -1,7 +1,10 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
+#include "../scores/score.h"
+
 #include <cstddef>
+#include <iostream>
 
 class Player {
 	unsigned int id;
@@ -14,8 +17,7 @@ class Player {
 	float jumpFactor;
 
 	size_t enemyDown;
-
-       public:
+public:
 	Player(unsigned int id, unsigned int health, float damage,
 	       float shieldPoints, float speed, float jumpFactor);
 	~Player();

@@ -7,7 +7,10 @@ Player::Player(unsigned int id, unsigned int health, float damage,
       damage(5.0f),
       shieldPoints(1.0f),
       speed(25.0f),
-      jumpFactor(3.0f) {}
+      jumpFactor(3.0f) {
+		  Score *scores = new Score(0);
+		  std::cout << scores->getInitPoints() << std::endl;
+		  }
 
 void Player::setID(unsigned int id) { this->id = id; }
 

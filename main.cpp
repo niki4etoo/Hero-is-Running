@@ -101,9 +101,7 @@ int main(void) {
 	
 	//Load level
 	Level *level = new Level(5);
-	//Score object	
-	Score *score = new Score(0);
-	std::cout << "Initial score: " << score->getInitPoints() << std::endl;
+	Player *player = new Player(1, 100, 25, 30, 5.0f, 2.0f);
 	
 	//Initialize an enemy
 	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
