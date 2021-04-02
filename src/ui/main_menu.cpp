@@ -82,6 +82,22 @@ void MainMenu::setQuitButtonBackgroundColor(float r, float g, float b, float a){
 	//to do
 }
 
+void MainMenu::setPosX(size_t posX){
+	this->posX = posX;
+}
+
+void MainMenu::setPosY(size_t posY){
+	this->posY = posY;
+}
+
+void MainMenu::setWidth(size_t width){
+	this->width = width;
+}
+
+void MainMenu::setHeight(size_t height){
+	this->height = height;
+}
+
 //Getters
 
 std::string MainMenu::getStartButtonText(){
@@ -142,4 +158,20 @@ float MainMenu::getQuitButtonBorderRadius(){
 
 float MainMenu::getQuitButtonBackgroundColor(){
 	//to do
+}
+
+size_t MainMenu::getPosX(){
+	return this->posX;
+}
+
+size_t MainMenu::getPosY(){
+	return this->posY;
+}
+
+size_t MainMenu::getWidth(){
+	return this->width;
+}
+
+size_t MainMenu::getHeight(){
+	return this->height;
 }

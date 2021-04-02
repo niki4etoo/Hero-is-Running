@@ -5,6 +5,11 @@
 #include <cstddef>
 
 class MainMenu {
+	size_t posX;
+	size_t posY;
+	size_t width;
+	size_t height;
+	
 	std::string startBtnText;
 	size_t startBtnWidth;
 	size_t startBtnHeight;
@@ -24,6 +29,11 @@ public:
 	MainMenu(std::string startBtnText, std::string settingsBtnText, std::string quitBtnText);
 	~MainMenu();
 	//Setters
+	void setPosX(size_t posX);
+	void setPosY(size_t posY);
+	void setWidth(size_t width);
+	void setHeight(size_t height);	
+	
 	void startButton();
 	void setStartButtonText(std::string label);
 	void setStartButtonWidth(size_t width);
@@ -46,6 +56,11 @@ public:
 	void setQuitButtonBackgroundColor(float r, float g, float b, float a);
 	
 	//Getters
+	size_t getPosX();
+	size_t getPosY();
+	size_t getWidth();
+	size_t getHeight();
+	
 	std::string getStartButtonText();
 	size_t getStartButtonWidth();
 	size_t getStartButtonHeight();
