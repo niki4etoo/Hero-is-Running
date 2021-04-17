@@ -30,6 +30,18 @@ void Obstacle::setLocation(float x, float y) {
 	this->y = y;
 }
 
+void Obstacle::setMovable(bool isMovable) {
+	this->isMovable = isMovable;
+}
+
+void Obstacle::setStatic(bool isStatic) {
+	this->isStatic = isStatic;
+}
+
+void Obstacle::setActive(bool isActive) {
+	this->isActive = isActive;
+}
+
 size_t Obstacle::getID() {
 	return this->id;
 }
@@ -52,4 +64,16 @@ float Obstacle::getLocationX() {
 
 float Obstacle::getLocationY() {
 	return this->y;
+}
+
+bool Obstacle::getMovable(){
+	return this->isMovable;
+}
+
+bool Obstacle::getStatic(){
+	return this->isStatic;
+}
+
+bool Obstacle::getActive(){
+	return this->isActive;
 }
