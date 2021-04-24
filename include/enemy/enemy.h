@@ -5,11 +5,14 @@
 #include <string>
 #include <iostream>
 
+#include "wave.h"
+
 class Enemy {
 	size_t id;
 	std::string name;
 	size_t type;
 	size_t level;
+	Wave wave;
 public:
 	Enemy(size_t id, std::string name, size_t type, size_t level);
 	~Enemy();

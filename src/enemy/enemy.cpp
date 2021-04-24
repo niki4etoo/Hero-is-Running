@@ -11,7 +11,11 @@ Enemy::Enemy(size_t id, std::string name, size_t type, size_t level){
 }
 
 void Enemy::spawn(){
-	std::cout << "Spawn one enemy" << std::endl; // To do
+	//Wave wave = new Wave();
+	this->wave.setID(1);
+	
+	std::cout << "Enemy wave: " << this->wave.getID() << std::endl;
+	std::cout << "Spawn one enemy" << std::endl;
 }
 
 void Enemy::setID(size_t id){
