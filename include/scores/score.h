@@ -9,7 +9,7 @@ class Score {
 	size_t points;
 	float factor;
 public:
-	Score(size_t initPoints);
+	Score();
 	~Score(){};
 	void setInitPoints(size_t points);
 	void setCurrentPoints(size_t points);

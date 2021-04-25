@@ -21,13 +21,12 @@
 #include "include/player/player.h"
 #include "include/player/player_profile.h"
 #include "include/scores/score.h"
+#include "include/player/achievements.h"
 #include "include/enemy/enemy.h"
 #include "include/ui/main_menu.h"
 
 
 using namespace std;
-
-
 
 // timing
 float deltaTime = 0.0f;
@@ -105,6 +104,8 @@ int main(void) {
 	
 	//Initialize an enemy
 	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
+	
+	
 	
 	// render loop
 	// -----------

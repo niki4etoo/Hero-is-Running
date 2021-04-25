@@ -1,8 +1,6 @@
 #include "../../include/scores/score.h"
 
-Score::Score(size_t initPoints) {
-	this->initPoints = initPoints;
-}
+Score::Score() {}
 
 void Score::setInitPoints(size_t points){
 	this->initPoints = points;

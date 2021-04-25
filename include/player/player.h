@@ -2,6 +2,7 @@
 #define PLAYER_H_
 
 #include "../scores/score.h"
+#include "achievements.h"
 
 #include <cstddef>
 #include <iostream>
@@ -17,6 +18,9 @@ class Player {
 	float jumpFactor;
 
 	size_t enemyDown;
+	
+	Score scores;
+	Achievements achievements;
 public:
 	Player(unsigned int id, unsigned int health, float damage,
 	       float shieldPoints, float speed, float jumpFactor);
