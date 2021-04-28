@@ -17,6 +17,9 @@ public:
 	//Getters
 	size_t getPoints();
 	size_t getRewardType();
+	
+	//Unlock achievements of certain types
+	void unlockAchievement(size_t points, size_t rewardType, size_t achievementType);
 };
 
 #endif
