@@ -1,13 +1,16 @@
 #ifndef SCORE_H_
 #define SCORE_H_
 
+#include <iostream>
 #include <cstddef>
+#include <ctime>
 
 class Score {
 	size_t initPoints;
 	size_t currentPoints;
 	size_t points;
 	float factor;
+	time_t now;
 public:
 	Score();
 	~Score(){};

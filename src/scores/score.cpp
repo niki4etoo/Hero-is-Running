@@ -1,6 +1,11 @@
 #include "../../include/scores/score.h"
 
-Score::Score() {}
+Score::Score() {
+	this->now = time(0);
+	char *dt = ctime(&this->now);
+	std::cout << "Current Date and Time: " << dt << std::endl;
+	std::cout << "Points: " << this->getCurrentPoints() << std::endl;
+}
 
 void Score::setInitPoints(size_t points){
 	this->initPoints = points;

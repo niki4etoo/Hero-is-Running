@@ -105,7 +105,8 @@ int main(void) {
 	//Initialize an enemy
 	Enemy *enemy = new Enemy(0, "Buggy", 1, 1);
 	
-	
+	//Score board initialization
+	Score *score = new Score();
 	
 	// render loop
 	// -----------
