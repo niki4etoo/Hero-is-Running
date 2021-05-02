@@ -42,6 +42,14 @@ void Obstacle::setActive(bool isActive) {
 	this->isActive = isActive;
 }
 
+void Obstacle::setDifficulty(size_t difficulty){
+	this->difficulty = difficulty;
+}
+
+void Obstacle::setLabel(std::string label){
+	this->label = label;
+}
+
 size_t Obstacle::getID() {
 	return this->id;
 }
@@ -76,4 +84,12 @@ bool Obstacle::getStatic(){
 
 bool Obstacle::getActive(){
 	return this->isActive;
+}
+
+size_t Obstacle::getDifficulty(){
+	return this->difficulty;
+}
+
+std::string Obstacle::getLabel(){
+	return this->label;
 }

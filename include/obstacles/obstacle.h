@@ -2,10 +2,15 @@
 #define OBSTACLE_H_
 
 #include <cstddef>
+#include <string>
 
 class Obstacle {
 	size_t id;
 	size_t type;
+	size_t difficulty;
+	
+	std::string label;
+	
 	float width;
 	float height;
 	float x, y;
@@ -28,6 +33,8 @@ public:
 	void setStatic(bool isStatic);
 	void setActive(bool isActive);
 	
+	void setLabel(std::string label);
+	void setDifficulty(size_t difficulty);
 	
 	//Getters
 	size_t getID();
@@ -40,6 +47,9 @@ public:
 	bool getMovable();
 	bool getStatic();
 	bool getActive();
+	
+	std::string getLabel();
+	size_t getDifficulty();
 };
 
 #endif
