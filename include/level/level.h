@@ -2,6 +2,7 @@
 #define LEVEL_H_
 
 #include "../checkpoint/checkpoint.h"
+#include "../obstacles/obstacle.h"
 #include <iostream>
 #include <map>
 #include <cstddef>
@@ -11,6 +12,7 @@ class Level {
 	size_t difficulty;
 	bool restart = false;
 	std::map<float, float> grid;
+	Obstacle obstacle;
 public:
 	Level(size_t option);
 	~Level(){};

@@ -1,12 +1,7 @@
 #include "../../include/obstacles/obstacle.h"
 
-Obstacle::Obstacle(size_t id, size_t type, float width, float height, float x, float y) {
-	this->id = id;
-	this->type = type;
-	this->width = width;
-	this->height = height;
-	this->x = x;
-	this->y = y;
+Obstacle::Obstacle(){
+	
 }
 
 void Obstacle::setID(size_t id) {

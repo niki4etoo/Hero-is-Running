@@ -19,8 +19,8 @@ class Obstacle {
 	bool isStatic = false;
 	bool isActive = false;
 public:
-	Obstacle(size_t id, size_t type, float width = 100, float height = 50, float x = 0, float y = 0);
-	~Obstacle();
+	Obstacle();
+	~Obstacle(){};
 	
 	//Setters
 	void setID(size_t id);
