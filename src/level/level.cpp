@@ -34,3 +34,16 @@ void Level::setDifficulty(size_t difficulty){
 size_t Level::getDifficulty(){
 	return difficulty;
 }
+
+bool Level::isStarted(bool start){
+	return start;
+}
+
+bool Level::isLoaded(bool loaded){
+	return loaded;
+}
+
+bool Level::isRestarted(bool restart){
+	return restart;
+}
+

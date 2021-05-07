@@ -10,6 +10,8 @@
 class Level {
 	size_t option;
 	size_t difficulty;
+	bool start = false;
+	bool loaded = false;
 	bool restart = false;
 	std::map<float, float> grid;
 	Obstacle obstacle;
@@ -20,6 +22,10 @@ public:
 	void loader(size_t option);
 	void setDifficulty(size_t difficulty);
 	size_t getDifficulty();
+	
+	bool isStarted(bool start);
+	bool isLoaded(bool loaded);
+	bool isRestarted(bool restart);
 };
 
 #endif
