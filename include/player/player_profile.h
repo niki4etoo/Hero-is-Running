@@ -20,6 +20,11 @@ class PlayerProfile {
 	unsigned int experience;
 	unsigned int level;
 	
+	//Stats
+	//Counts
+	size_t numberOfWinning;
+	size_t numberOfLosses;
+	
 public:
 	PlayerProfile(std::string name, std::string lastName);
 	~PlayerProfile();
@@ -40,6 +45,9 @@ public:
 	void setExperience(unsigned int experience);
 	void setLevel(unsigned int level);
 	
+	void setNumberOfWinning(size_t numberOfWinning);
+	void setNumberOfLosses(size_t numberOfLosses);
+	
 	//Getters
 	unsigned int getID();
 	
@@ -55,6 +63,9 @@ public:
 	std::string getHero();
 	unsigned int getExperience();
 	unsigned int getLevel();
+	
+	size_t getNumberOfWinning();
+	size_t getNumberOfLosses();
 };
 
 #endif

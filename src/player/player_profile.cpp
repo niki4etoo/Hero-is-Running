@@ -51,6 +51,14 @@ void PlayerProfile::setLevel(unsigned int level){
 	this->level = level;
 }
 
+void PlayerProfile::setNumberOfWinning(size_t numberOfWinning){
+	this->numberOfWinning = numberOfWinning;
+}
+
+void PlayerProfile::setNumberOfLosses(size_t numberOfLosses){
+	this->numberOfLosses = numberOfLosses;
+}
+
 //Getters
 unsigned int PlayerProfile::getID(){
 	return this->id;
@@ -94,4 +102,12 @@ unsigned int PlayerProfile::getExperience(){
 
 unsigned int PlayerProfile::getLevel(){
 	return this->level;
+}
+
+size_t PlayerProfile::getNumberOfWinning(){
+	return this->numberOfWinning;
+}
+
+size_t PlayerProfile::getNumberOfLosses(){
+	return this->numberOfLosses;
 }
