@@ -18,6 +18,10 @@ void PlayerProfile::setLastName(std::string lastName){
 	this->lastName = lastName;
 }
 
+void PlayerProfile::setMiddleName(std::string middleName){
+	this->middleName = middleName;
+}
+
 void PlayerProfile::setCountry(std::string country){
 	this->country = country;
 }
@@ -70,6 +74,10 @@ std::string PlayerProfile::getName(){
 
 std::string PlayerProfile::getLastName(){
 	return this->lastName;
+}
+
+std::string PlayerProfile::getMiddleName(){
+	return this->middleName;
 }
 
 std::string PlayerProfile::getCountry(){

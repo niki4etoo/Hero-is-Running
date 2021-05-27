@@ -9,11 +9,14 @@ class PlayerProfile {
 	//Personal player info
 	std::string name;
 	std::string lastName;
+	std::string middleName;
 	
 	std::string country;
 	std::string city;
 	std::string avatarDescription;
 	std::string shortDescription;
+	
+	
 	//Game info
 	std::string nickname;
 	std::string hero;
@@ -34,6 +37,7 @@ public:
 	
 	void setName(std::string name);
 	void setLastName(std::string lastName);
+	void setMiddleName(std::string middleName);
 	
 	void setCountry(std::string country);
 	void setCity(std::string city);
@@ -53,6 +57,7 @@ public:
 	
 	std::string getName();
 	std::string getLastName();
+	std::string getMiddleName();
 	
 	std::string getCountry();
 	std::string getCity();
