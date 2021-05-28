@@ -11,6 +11,11 @@ class PlayerProfile {
 	std::string lastName;
 	std::string middleName;
 	
+	//Social contacts
+	std::string email;
+	std::string instagram;
+	std::string facebook;
+	
 	std::string country;
 	std::string city;
 	std::string avatarDescription;
@@ -39,6 +44,11 @@ public:
 	void setLastName(std::string lastName);
 	void setMiddleName(std::string middleName);
 	
+	//Social networks
+	void setEmail(std::string email);
+	void setInstagram(std::string instagram);
+	void setFacebook(std::string facebook);
+	
 	void setCountry(std::string country);
 	void setCity(std::string city);
 	void setAvatarDescription(std::string avatarDescription);
@@ -58,6 +68,11 @@ public:
 	std::string getName();
 	std::string getLastName();
 	std::string getMiddleName();
+	
+	//Social networks
+	std::string getEmail();
+	std::string getInstagram();
+	std::string getFacebook();
 	
 	std::string getCountry();
 	std::string getCity();

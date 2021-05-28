@@ -22,6 +22,19 @@ void PlayerProfile::setMiddleName(std::string middleName){
 	this->middleName = middleName;
 }
 
+//Social networks
+void setEmail(std::string email){
+	this->email = email;
+}
+
+void setInstagram(std::string instagram){
+	this->instagram = instagram;
+}
+
+void setFacebook(std::string facebook){
+	this->facebook = facebook;
+}
+
 void PlayerProfile::setCountry(std::string country){
 	this->country = country;
 }
@@ -78,6 +91,18 @@ std::string PlayerProfile::getLastName(){
 
 std::string PlayerProfile::getMiddleName(){
 	return this->middleName;
+}
+
+std::string getEmail(){
+	return this->email;
+}
+
+std::string getInstagram(){
+	return this->instagram;
+}
+
+std::string getFacebook(){
+	return this->facebook;
 }
 
 std::string PlayerProfile::getCountry(){
