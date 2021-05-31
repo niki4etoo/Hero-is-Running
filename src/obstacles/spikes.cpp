@@ -25,6 +25,10 @@ void Spikes::setPosY(size_t posY){
 	this->posY = posY;
 }
 
+void Spikes::setIsMovable(bool isMovable){
+	this->isMovable = isMovable;
+}
+
 //Getters
 std::string Spikes::getType(){
 	this->type = type;
@@ -46,5 +50,9 @@ size_t Spikes::getPosX(){
 	this->posX = posX;
 }
 size_t Spikes::getPosY(){
-	this->posY = posY;
+	this->posY = posY; // to do
+}
+
+bool Spikes::getIsMovable(){
+	return this->isMovable;
 }

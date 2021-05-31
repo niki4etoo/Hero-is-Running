@@ -10,6 +10,7 @@ class Spikes {
 	size_t count;
 	size_t posX, posY;
 	//To do ( Texture load of spike )
+	bool isMovable = false;
 public:
 	Spikes(){};
 	~Spikes(){};
@@ -22,6 +23,8 @@ public:
 	void setPosX(size_t posX);
 	void setPosY(size_t posY);
 	
+	void setIsMovable(bool isMovable);
+	
 	//Getters
 	std::string getType();
 	size_t getWidth();
@@ -29,6 +32,8 @@ public:
 	size_t getCount();
 	size_t getPosX();
 	size_t getPosY();
+	
+	bool getIsMovable();
 };
 
 #endif
