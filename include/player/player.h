@@ -10,6 +10,11 @@
 class Player {
 	unsigned int id;
 
+	// Personal Info
+	std::string firstName;
+	std::string lastName;
+	size_t age;
+
 	unsigned int health;
 	float damage;
 	float shieldPoints;
@@ -33,6 +38,9 @@ public:
 	void setShieldPoints(float shieldPoints);
 	void setSpeed(float speed);
 	void setJumpFactor(float jumpFactor);
+	void setFirstName(std::string firstName);
+	void setLastName(std::string lastName);
+	void setAge(size_t age);
 	
 	//Getters
 	unsigned int getID();
@@ -41,7 +49,9 @@ public:
 	float getShieldPoints();
 	float getSpeed();
 	float getJumpFactor();
-	
+	std::string getFirstName();
+	std::string getLastName();
+	size_t getAge();
 	
 };
 

@@ -28,6 +28,18 @@ void Player::setJumpFactor(float jumpFactor) {
 	this->jumpFactor = jumpFactor;
 }
 
+void Player::setFirstName(std::string firstName){
+	this->firstName = firstName;
+}
+
+void Player::setLastName(std::string lastName){
+	this->lastName = lastName;
+}
+
+void Player::setAge(size_t age){
+	this->age = age;
+}
+
 unsigned int Player::getID() { return this->id; }
 
 unsigned int Player::getHealth() { return this->health; }
@@ -39,3 +51,15 @@ float Player::getShieldPoints() { return this->shieldPoints; }
 float Player::getSpeed() { return this->speed; }
 
 float Player::getJumpFactor() { return this->jumpFactor; }
+
+std::string Player::getFirstName(){
+	return this->firstName;
+}
+
+std::string Player::getLastName(){
+	return this->lastName;
+}
+
+size_t Player::getAge(){
+	return this->age;
+}
