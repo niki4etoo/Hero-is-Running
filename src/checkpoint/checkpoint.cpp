@@ -22,6 +22,14 @@ void Checkpoint::setCurrentPosition(size_t currentPosition){
 	this->currentPosition = currentPosition;
 }
 
+void Checkpoint::setWidth(size_t width){
+	this->width = width;
+}
+
+void Checkpoint::setHeight(size_t height){
+	this->height = height;
+}
+
 size_t Checkpoint::getID(){
 	return this->id;
 }
@@ -36,4 +44,12 @@ size_t Checkpoint::getPosition(){
 
 size_t Checkpoint::getCheckpointLevel(){
 	return this->checkpointLevel;
+}
+
+size_t Checkpoint::getWidth(){
+	return this->width;
+}
+
+size_t Checkpoint::getHeight(){
+	return this->height;
 }
