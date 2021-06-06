@@ -2,6 +2,7 @@
 #define CHECKPOINT_H_
 
 #include <cstddef>
+#include <string>
 
 class Checkpoint {
 	size_t id;
@@ -12,6 +13,8 @@ class Checkpoint {
 	size_t checkpointLevel;
 	
 	size_t width, height;
+	
+	std::string name;
 public:
 	Checkpoint();
 	~Checkpoint();
@@ -25,6 +28,8 @@ public:
 	void setWidth(size_t width);
 	void setHeight(size_t height);
 	
+	void setName(std::string name);
+	
 	//Getters
 	size_t getID();
 	size_t getPosition();
@@ -34,6 +39,7 @@ public:
 	size_t getWidth();
 	size_t getHeight();
 	
+	std::string getName();
 };
 
 #endif

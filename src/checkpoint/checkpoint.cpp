@@ -30,6 +30,10 @@ void Checkpoint::setHeight(size_t height){
 	this->height = height;
 }
 
+void Checkpoint::setName(std::string name){
+	this->name = name;
+}
+
 size_t Checkpoint::getID(){
 	return this->id;
 }
@@ -52,4 +56,8 @@ size_t Checkpoint::getWidth(){
 
 size_t Checkpoint::getHeight(){
 	return this->height;
+}
+
+std::string Checkpoint::getName(){
+	return this->name;
 }
