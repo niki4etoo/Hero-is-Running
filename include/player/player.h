@@ -7,6 +7,8 @@
 #include <cstddef>
 #include <iostream>
 
+#include "player_profile.h"
+
 class Player {
 	unsigned int id;
 
@@ -15,10 +17,13 @@ class Player {
 	std::string lastName;
 	size_t age;
 
+	//Player properties
 	unsigned int health;
 	float damage;
 	float shieldPoints;
 	float speed;
+
+	PlayerProfile playerProfile(std::string name, std::string lastName);
 
 	float jumpFactor;
 
