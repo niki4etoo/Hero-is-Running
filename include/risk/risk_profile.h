@@ -19,6 +19,9 @@ public:
 	//Getters
 	size_t getScale();
 	size_t getRiskTaken();
+	
+	
+	
 };
 
 #endif
