@@ -26,13 +26,16 @@
 #include "include/ui/main_menu.h"
 
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::vector;
+using std::string;
 
 // timing
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
-const std::string error_text_glad_initialize = "Failed to initialize GLAD.";
+const string error_text_glad_initialize = "Failed to initialize GLAD.";
 
 Callbacks *callback = new Callbacks();
 InputProcessing *input = new InputProcessing();
@@ -47,7 +50,7 @@ int main(void) {
 	// glad: load all OpenGL function pointers
 	// ---------------------------------------
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << error_text_glad_initialize << std::endl;
+		cout << error_text_glad_initialize << endl;
 		return -1;
 	}
 
