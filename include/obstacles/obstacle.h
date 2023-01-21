@@ -9,7 +9,10 @@ class Obstacle {
 	size_t type;
 	size_t difficulty;
 	
+		
+	
 	std::string label;
+	std::string style;
 	
 	float width;
 	float height;
@@ -34,6 +37,7 @@ public:
 	void setActive(bool isActive);
 	
 	void setLabel(std::string label);
+	void setStyle(std::string style);
 	void setDifficulty(size_t difficulty);
 	
 	//Getters
@@ -49,6 +53,7 @@ public:
 	bool getActive();
 	
 	std::string getLabel();
+	std::string getStyle();
 	size_t getDifficulty();
 };
 
