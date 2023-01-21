@@ -45,6 +45,10 @@ void Obstacle::setLabel(std::string label){
 	this->label = label;
 }
 
+void Obstacle::setStyle(std::string style){
+	this->style = style;
+}
+
 size_t Obstacle::getID() {
 	return this->id;
 }
@@ -87,4 +91,8 @@ size_t Obstacle::getDifficulty(){
 
 std::string Obstacle::getLabel(){
 	return this->label;
+}
+
+std::string Obstacle::getStyle(){
+	return this->style;
 }
